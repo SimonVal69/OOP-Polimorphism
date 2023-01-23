@@ -1,6 +1,6 @@
 package transport;
 
-import driver.DriverD;
+import driver.*;
 import interfaces.Competing;
 
 public class Bus extends Transport<DriverD> implements Competing {

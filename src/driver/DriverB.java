@@ -1,11 +1,13 @@
 package driver;
 
+import utils.Utils;
+
 public class DriverB extends Driver {
     private String typeOfDriverLicense;
 
     public DriverB(String name, boolean isDriverLicense, double driveExperience, String typeOfDriverLicense) {
         super(name, isDriverLicense, driveExperience);
-        this.typeOfDriverLicense = typeOfDriverLicense;
+        this.typeOfDriverLicense = Utils.checkData(typeOfDriverLicense);
     }
 
 

@@ -1,9 +1,5 @@
-import driver.DriverB;
-import driver.DriverC;
-import driver.DriverD;
-import transport.Bus;
-import transport.Car;
-import transport.Truck;
+import driver.*;
+import transport.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -27,10 +23,8 @@ public class Main {
         Bus bus3 = new Bus("Neoplan", "BN300", 5.5, driverD);
         Bus bus4 = new Bus("Icarus", "BI400", 5.5, driverD);
 
-        System.out.println();
-        System.out.println("Водитель с категорией B " + driverB + " управляет автомобилем " + car1 + " и будет учавствовать в заезде");
-        System.out.println("Водитель с категорией C " + driverC + " управляет автомобилем " + truck1 + " и будет учавствовать в заезде");
-        System.out.println("Водитель с категорией D " + driverD + " управляет автомобилем " + bus1 + " и будет учавствовать в заезде");
+        showInfo(driverB, driverC, driverD, car1, car2, truck1, truck2, bus1, bus2);
+        showInfo(driverB, driverC, driverD, car3, car4, truck3, truck4, bus3, bus4);
         System.out.println();
 
         driverB.fillCar();
@@ -74,5 +68,16 @@ public class Main {
         truck1.maxSpeed();
         bus1.maxSpeed();
 
+    }
+
+    private static void showInfo(DriverB driverB, DriverC driverC, DriverD driverD, Car car1, Car car2, Truck truck1, Truck truck2, Bus bus1, Bus bus2) {
+        System.out.println();
+        System.out.println("Водитель с категорией B " + driverB + " управляет автомобилем " + car1 + " и будет учавствовать в заезде");
+        System.out.println("Водитель с категорией C " + driverC + " управляет автомобилем " + truck1 + " и будет учавствовать в заезде");
+        System.out.println("Водитель с категорией D " + driverD + " управляет автомобилем " + bus1 + " и будет учавствовать в заезде");
+        System.out.println();
+        System.out.println("Водитель с категорией B " + driverB + " управляет автомобилем " + car2 + " и будет учавствовать в заезде");
+        System.out.println("Водитель с категорией C " + driverC + " управляет автомобилем " + truck2 + " и будет учавствовать в заезде");
+        System.out.println("Водитель с категорией D " + driverD + " управляет автомобилем " + bus2 + " и будет учавствовать в заезде");
     }
 }
